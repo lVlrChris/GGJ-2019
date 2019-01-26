@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     private int _pickups;
     [SerializeField]
     private Animator _animator;
+    [SerializeField]
+    private int _playerNr = 1;
 
     [Header("Movement Settings")]
     [SerializeField]
@@ -42,6 +44,8 @@ public class Player : MonoBehaviour
 
         _jumpForce = 0f;
         _originalScale = _playerModel.transform.localScale;
+        _playerModel.GetComponent<PlayerModel>().playerNr = _playerNr;
+
     }
 
     // FixedUpdate before physics calculation
@@ -63,8 +67,8 @@ public class Player : MonoBehaviour
     }
 
     private void ballMovement() {
-        float xSpeed = Input.GetAxis("Horizontal");
-        float ySpeed = Input.GetAxis("Vertical");
+        float xSpeed = Input.GetAxis("Horizontal_P" + _playerNr);
+        float ySpeed = Input.GetAxis("Vertical_P" + _playerNr);
 
         if (xSpeed != 0 || ySpeed != 0) {
             _animator.SetBool("isRunning", true);
@@ -80,7 +84,8 @@ public class Player : MonoBehaviour
 
     private void Jump() {
         // Holding jump button
-        if (Input.GetKey(KeyCode.Space)) {
+        if (Input.GetButton("Jump_P" + _playerNr)) {
+            print("Jump_P" + _playerNr);
             _animator.SetBool("isChargingJump", true);
 
             if (_jumpForce < _maxJumpForce) {
