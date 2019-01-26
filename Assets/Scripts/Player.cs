@@ -100,6 +100,5 @@ public class Player : MonoBehaviour
 
     public void AddPickup() {
         _pickups++;
-        print(_pickups);
     }
 }

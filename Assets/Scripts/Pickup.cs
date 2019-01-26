@@ -11,6 +11,7 @@ public class Pickup : MonoBehaviour
             player = other.transform.GetComponent<Player>();
             if (player != null) {
                 player.AddPickup();
+                PickupManager.instance.SpawnNewPickup();
                 Destroy(this.gameObject);
             }
         }
