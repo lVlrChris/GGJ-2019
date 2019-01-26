@@ -15,6 +15,9 @@ public class PlayerModel : MonoBehaviour
     {
         float xInput = Input.GetAxis("Horizontal");
         float yInput = Input.GetAxis("Vertical");
-        transform.rotation = Quaternion.LookRotation(new Vector3(xInput, 0 , yInput));
+        
+        if (xInput != 0 || yInput != 0) {
+            transform.rotation = Quaternion.LookRotation(new Vector3(xInput, 0 , yInput));
+        }
     }
 }
