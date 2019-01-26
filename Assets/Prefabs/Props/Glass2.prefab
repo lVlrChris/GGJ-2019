@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5319634108218304919}
   - component: {fileID: 5319634108218304916}
   - component: {fileID: 5319634108218304917}
+  - component: {fileID: 5899115413870667298}
+  - component: {fileID: 1830450441}
   m_Layer: 0
   m_Name: Glass2
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5319634108218304914}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.3200731, y: 0.33999997, z: 0.13765912}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -77,3 +79,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5899115413870667298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5319634108218304914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8321317a0407e43ba8ff0ae902c7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _brokenPrefab: {fileID: 5475294181462093851, guid: 0b8c90f241340b14f84afef2e68ea6eb,
+    type: 3}
+--- !u!65 &1830450441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5319634108218304914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08, y: 0.1744, z: 0.08}
+  m_Center: {x: 0, y: 0.0872, z: 0}

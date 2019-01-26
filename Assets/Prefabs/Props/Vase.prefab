@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8026802512273277227}
   - component: {fileID: 8026802512273277226}
   - component: {fileID: 8026802512273277229}
+  - component: {fileID: 6035154772858429551}
   m_Layer: 0
   m_Name: Vase
   m_TagString: Untagged
@@ -109,3 +110,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6035154772858429551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8026802512273277228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8321317a0407e43ba8ff0ae902c7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _brokenPrefab: {fileID: 2378105778700981112, guid: b471de5efa9ca644eb199b6fe49d8ae7,
+    type: 3}

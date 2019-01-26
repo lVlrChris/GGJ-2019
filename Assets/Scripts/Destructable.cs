@@ -9,7 +9,9 @@ public class Destructable : MonoBehaviour
 
     void OnCollisionEnter(Collision other) {
         if (other.gameObject.tag.Equals("Player")) {
+            gameObject.SetActive(false);
             Instantiate(_brokenPrefab, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
 }
