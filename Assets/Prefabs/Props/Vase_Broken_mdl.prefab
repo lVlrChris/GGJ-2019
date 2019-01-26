@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 2226508853696422700}
   - component: {fileID: 4586456937414560221}
   - component: {fileID: 8917526890801838114}
-  m_Layer: 0
+  - component: {fileID: 8851244008715324674}
+  - component: {fileID: 1887356362254591983}
+  m_Layer: 10
   m_Name: shard1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,6 +79,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &8851244008715324674
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150742209189090644}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1887356362254591983
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150742209189090644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.111226, y: 0.10487799, z: 0.171995}
+  m_Center: {x: -0.037187, y: 0.252461, z: -0.0068024993}
 --- !u!1 &886491588400901818
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +119,9 @@ GameObject:
   - component: {fileID: 3675650730796054101}
   - component: {fileID: 1779313869657029915}
   - component: {fileID: 3401916173539631441}
-  m_Layer: 0
+  - component: {fileID: 6443882257792037623}
+  - component: {fileID: 6283698302940124678}
+  m_Layer: 10
   m_Name: shard3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,6 +187,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &6443882257792037623
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886491588400901818}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6283698302940124678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886491588400901818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13049, y: 0.199255, z: 0.075550005}
+  m_Center: {x: 0.0061799996, y: 0.1460275, z: 0.055124998}
 --- !u!1 &2093036465637540030
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +227,9 @@ GameObject:
   - component: {fileID: 987147020848644029}
   - component: {fileID: 8944556345483660177}
   - component: {fileID: 811826890987163587}
-  m_Layer: 0
+  - component: {fileID: 7202642519219392766}
+  - component: {fileID: 1448073511784048426}
+  m_Layer: 10
   m_Name: shard7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,6 +295,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &7202642519219392766
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093036465637540030}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1448073511784048426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093036465637540030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.162987, y: 0.151373, z: 0.134532}
+  m_Center: {x: 0.005174499, y: 0.0756865, z: 0.00361}
 --- !u!1 &2378105778700981112
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5078346445709846808}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Vase_Broken_mdl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +374,9 @@ GameObject:
   - component: {fileID: 5479714685139070193}
   - component: {fileID: 5218668220641226282}
   - component: {fileID: 4733977269887437021}
-  m_Layer: 0
+  - component: {fileID: 4192256487802335499}
+  - component: {fileID: 2382292319989729794}
+  m_Layer: 10
   m_Name: shard9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,6 +442,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &4192256487802335499
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2609907277724405744}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2382292319989729794
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2609907277724405744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.040997, y: 0.063783, z: 0.030381}
+  m_Center: {x: -0.0233135, y: 0.1310835, z: -0.0449215}
 --- !u!1 &2721948172476242850
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +482,9 @@ GameObject:
   - component: {fileID: 1770337630076341040}
   - component: {fileID: 8254947672001447827}
   - component: {fileID: 6455068426539171329}
-  m_Layer: 0
+  - component: {fileID: 1258358724483591281}
+  - component: {fileID: 7348286674804597541}
+  m_Layer: 10
   m_Name: shard6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,6 +550,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &1258358724483591281
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2721948172476242850}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7348286674804597541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2721948172476242850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.082688004, y: 0.160573, z: 0.102229}
+  m_Center: {x: -0.051556, y: 0.1541505, z: -0.010552499}
 --- !u!1 &4964632907378586739
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +590,9 @@ GameObject:
   - component: {fileID: 2659841040738477634}
   - component: {fileID: 7200195212063763207}
   - component: {fileID: 4737120834910967502}
-  m_Layer: 0
+  - component: {fileID: 481890200475216663}
+  - component: {fileID: 7068035280681451406}
+  m_Layer: 10
   m_Name: shard2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,6 +658,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &481890200475216663
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964632907378586739}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7068035280681451406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964632907378586739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.111065, y: 0.19121401, z: 0.081760004}
+  m_Center: {x: 0.0094995, y: 0.175338, z: -0.05202}
 --- !u!1 &4970516153872286330
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +698,9 @@ GameObject:
   - component: {fileID: 8794005678013814123}
   - component: {fileID: 6642946492200927373}
   - component: {fileID: 2853296618255800573}
-  m_Layer: 0
+  - component: {fileID: 3472517249107755144}
+  - component: {fileID: 3574879291366162996}
+  m_Layer: 10
   m_Name: shard4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,6 +766,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &3472517249107755144
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970516153872286330}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &3574879291366162996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970516153872286330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.149303, y: 0.131846, z: 0.120001}
+  m_Center: {x: -0.0029155016, y: 0.100348, z: -0.0188995}
 --- !u!1 &7468167744296027160
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +806,9 @@ GameObject:
   - component: {fileID: 8910196322491769016}
   - component: {fileID: 2047795153095988742}
   - component: {fileID: 5902110110234207162}
-  m_Layer: 0
+  - component: {fileID: 7446037885258839230}
+  - component: {fileID: 8726112461234555585}
+  m_Layer: 10
   m_Name: shard8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,6 +874,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &7446037885258839230
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468167744296027160}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &8726112461234555585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468167744296027160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.125519, y: 0.17532998, z: 0.12840399}
+  m_Center: {x: 0.028238501, y: 0.174687, z: -0.0011289977}
 --- !u!1 &8538662185065307758
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +914,9 @@ GameObject:
   - component: {fileID: 2092320359809055524}
   - component: {fileID: 1670320048168141854}
   - component: {fileID: 4236736012419060178}
-  m_Layer: 0
+  - component: {fileID: 433508360706383603}
+  - component: {fileID: 1366603148522506924}
+  m_Layer: 10
   m_Name: shard5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,3 +982,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &433508360706383603
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8538662185065307758}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.2
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1366603148522506924
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8538662185065307758}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.115821004, y: 0.148087, z: 0.167174}
+  m_Center: {x: 0.0349895, y: 0.2308565, z: 0.009213001}

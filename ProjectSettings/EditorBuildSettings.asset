@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 0c5ac9d12fc86cb49989bd22bb7aeb93
+    path: Assets/Scenes/Splashpiel.unity
+    guid: 3f01b67b37504294ea2d18ede98f4dc0
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: cdf6e17607c1b8949b15e7e3a95d907a
