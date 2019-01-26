@@ -96,6 +96,7 @@ ModelImporter:
     400088: Tongue
     400090: Tongue 1
     2100000: lambert1
+    2100002: lambert2
     4300000: Dog
     4300002: Tongue
     4300004: Eyes
@@ -112,6 +113,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
+    second: {fileID: 2100000, guid: f944ae082939d9d4998f170bc78e8fc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
     second: {fileID: 2100000, guid: f944ae082939d9d4998f170bc78e8fc2, type: 2}
   materials:
     importMaterials: 1
