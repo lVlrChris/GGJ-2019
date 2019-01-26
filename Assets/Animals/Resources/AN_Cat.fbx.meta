@@ -37,6 +37,7 @@ ModelImporter:
     100062: rlLeg
     100064: Root
     100066: Tail
+    100068: Cat
     400000: //RootNode
     400002: Body
     400004: Center
@@ -71,9 +72,12 @@ ModelImporter:
     400062: rlLeg
     400064: Root
     400066: Tail
+    400068: Cat
     2100000: lambert1
+    2100002: lambert2
     4300000: Body
     4300002: Eyes
+    4300004: Cat
     7400000: Idle
     7400002: Run
     7400004: Start Jump
@@ -81,11 +85,17 @@ ModelImporter:
     9500000: //RootNode
     13700000: Body
     13700002: Eyes
+    13700004: Cat
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
+    second: {fileID: 2100000, guid: 222b8660e6340624baf50d9d4e6c2a75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
     second: {fileID: 2100000, guid: 222b8660e6340624baf50d9d4e6c2a75, type: 2}
   materials:
     importMaterials: 1

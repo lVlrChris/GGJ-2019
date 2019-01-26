@@ -292,6 +292,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5192543729163232369, guid: 4df010beb6bcf4548bec001e95399e16,
         type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192543729163232369, guid: 4df010beb6bcf4548bec001e95399e16,
+        type: 3}
       propertyPath: m_Bones.Array.data[0]
       value: 
       objectReference: {fileID: 7844396845454126156}
@@ -445,6 +450,26 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 7844396845454126156}
+    - target: {fileID: 5192543729163232369, guid: 4df010beb6bcf4548bec001e95399e16,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192543729163232369, guid: 4df010beb6bcf4548bec001e95399e16,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192543729163232369, guid: 4df010beb6bcf4548bec001e95399e16,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192543729163232371, guid: 4df010beb6bcf4548bec001e95399e16,
+        type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5192543729163232371, guid: 4df010beb6bcf4548bec001e95399e16,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -600,6 +625,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 7844396845454126156}
+    - target: {fileID: 5192543729163232371, guid: 4df010beb6bcf4548bec001e95399e16,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192543729163232371, guid: 4df010beb6bcf4548bec001e95399e16,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192543729163232371, guid: 4df010beb6bcf4548bec001e95399e16,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df010beb6bcf4548bec001e95399e16, type: 3}
 --- !u!95 &1116915273534937408 stripped
