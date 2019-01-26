@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     public int pickups;
     [SerializeField]
+    public int totalDamage;
+    [SerializeField]
     private ParticleSystem _sprintParticle;
     [SerializeField]
     private Animator _animator;
@@ -123,5 +125,9 @@ public class Player : MonoBehaviour
 
     public void AddPickup() {
         pickups++;
+    }
+
+    public void AddDamage(int value) {
+        totalDamage += value;
     }
 }
