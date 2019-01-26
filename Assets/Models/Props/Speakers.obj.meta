@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: fe6e46d430043964d8f020f03bcee28e
+guid: 224bbdf89ac477c42afed96d45242bcb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Box001
+    100000: Speaker
     100002: //RootNode
-    100004: Plane001
-    400000: Box001
+    400000: Speaker
     400002: //RootNode
-    400004: Plane001
-    2100000: Box001Mat
-    2100002: Plane001Mat
-    2300000: Box001
-    2300002: Plane001
-    3300000: Box001
-    3300002: Plane001
-    4300000: Box001
-    4300002: Plane001
+    2100000: SpeakerMat
+    2300000: Speaker
+    3300000: Speaker
+    4300000: Speaker
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -48,7 +42,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.8
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -57,7 +51,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
