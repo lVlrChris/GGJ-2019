@@ -18,7 +18,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _jumpChargeRate;
     private float _jumpForce;
-
+    [SerializeField]
+    private GameObject _playerModel;
+    [SerializeField]
+    private float _maxSquash;
+    [SerializeField]
+    private float _squashRate;
+    private Vector3 _originalScale;
 
     private Rigidbody rb;
 
@@ -27,6 +33,9 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.maxAngularVelocity = _maxSpinSpeed;
+
+        _jumpForce = 0f;
+        _originalScale = _playerModel.transform.localScale;
     }
 
     // FixedUpdate before physics calculation
@@ -59,16 +68,28 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.Space)) {
             if (_jumpForce < _maxJumpForce) {
                 _jumpForce += _jumpChargeRate * Time.deltaTime;
+                
+                float modelSquash = _playerModel.transform.localScale.y;
+
+                //Squasing
+                print("Current jump force: " + _jumpForce + " - " + _maxJumpForce);
+                print("Current Squash: " + modelSquash + " - " + _maxSquash);
+                if (modelSquash > _maxSquash) {
+                    modelSquash -= _squashRate * Time.deltaTime;
+                    _playerModel.transform.localScale -= new Vector3(0, _squashRate, 0);
+                } else {
+                    _playerModel.transform.localScale = new Vector3(_originalScale.x, _maxSquash, _originalScale.z);
+                }
             } else {
                 _jumpForce = _maxJumpForce;
             }
-            print(_jumpForce);
 
         } else {
             // Released jump button
             if (_jumpForce > 0f) {
                 _jumpForce = _jumpForce + _minJumpForce;
                 rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+                _playerModel.transform.localScale = _originalScale;
                 _jumpForce = 0f;
             } 
         }
