@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private int _pickups;
+    [SerializeField]
+    private Animator _animator;
 
     [Header("Movement Settings")]
     [SerializeField]
@@ -36,6 +38,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.maxAngularVelocity = _maxSpinSpeed;
+        _animator.SetBool("isChargingJump", false);
 
         _jumpForce = 0f;
         _originalScale = _playerModel.transform.localScale;
@@ -52,6 +55,8 @@ public class Player : MonoBehaviour
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance + 0.1f);
 
         if (isGrounded) {
+            print("hello");
+            _animator.SetBool("isGrounded", true);
             Jump();
         }
     }
@@ -59,6 +64,12 @@ public class Player : MonoBehaviour
     private void ballMovement() {
         float xSpeed = Input.GetAxis("Horizontal");
         float ySpeed = Input.GetAxis("Vertical");
+
+        if (xSpeed != 0 || ySpeed != 0) {
+            _animator.SetBool("isRunning", true);
+        } else {
+            _animator.SetBool("isRunning", false);
+        }
         
         xSpeed = xSpeed * _speed * Time.deltaTime;
         ySpeed = ySpeed * _speed * Time.deltaTime;
@@ -69,12 +80,14 @@ public class Player : MonoBehaviour
     private void Jump() {
         // Holding jump button
         if (Input.GetKey(KeyCode.Space)) {
+            _animator.SetBool("isChargingJump", true);
+
             if (_jumpForce < _maxJumpForce) {
                 _jumpForce += _jumpChargeRate * Time.deltaTime;
                 
                 float modelSquash = _playerModel.transform.localScale.y;
 
-                //Squasing
+                //Squashing
                 // print("Current jump force: " + _jumpForce + " - " + _maxJumpForce);
                 // print("Current Squash: " + modelSquash + " - " + _maxSquash);
                 if (modelSquash > _maxSquash) {
@@ -88,6 +101,8 @@ public class Player : MonoBehaviour
             }
 
         } else {
+            _animator.SetBool("isChargingJump", false);
+            _animator.SetBool("isGrounded", false);
             // Released jump button
             if (_jumpForce > 0f) {
                 _jumpForce = _jumpForce + _minJumpForce;
