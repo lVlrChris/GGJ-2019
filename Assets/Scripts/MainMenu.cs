@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void QuitGame()
+  /*  public void QuitGame()
     {
         public IEnumerator QuitGame()
         {
@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
             yield return new WaitForSeconds(5f);
             Application.Quit();
         }
-    } 
+    } */ 
 
     public void Credits()
     {
