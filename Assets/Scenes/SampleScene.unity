@@ -678,6 +678,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameDuration: 60
+  _timeLeft: 0
+  _playerOne: {fileID: 0}
+  _playerTwo: {fileID: 0}
+  _pickupMultiplier: 100
 --- !u!1 &1237263121
 GameObject:
   m_ObjectHideFlags: 0

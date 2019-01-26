@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _playerNr = 1;
     [SerializeField]
-    private int _pickups;
+    public int pickups;
     [SerializeField]
     private ParticleSystem _sprintParticle;
     [SerializeField]
@@ -122,6 +122,6 @@ public class Player : MonoBehaviour
     }
 
     public void AddPickup() {
-        _pickups++;
+        pickups++;
     }
 }

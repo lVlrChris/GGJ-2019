@@ -9,8 +9,20 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private float _gameDuration = 90;
-
     public float _timeLeft;
+
+    [Header("Players")]
+    [SerializeField]
+    private Player _playerOne;
+    [SerializeField]
+    private Player _playerTwo;
+
+    [Header("Score Values")]
+    [SerializeField]
+    private int _pickupMultiplier = 100;
+
+    private bool gameStarted = false;
+
 
     void Awake() {
         if (instance == null) {
@@ -24,19 +36,31 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _timeLeft = _gameDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _timeLeft -= Time.deltaTime;
-        if (_timeLeft < 0) {
-            EndGame();
+        if (gameStarted) {
+            _timeLeft -= Time.deltaTime;
+            if (_timeLeft < 0) {
+                EndGame();
+            }
         }
     }
 
     void EndGame() {
-        
+        int playerOneScore = 0;
+        int playerTwoScore = 0;
+        playerOneScore = _playerOne.pickups * 100;
+        playerTwoScore = _playerTwo.pickups * 100;
+
+        if (playerOneScore > playerTwoScore) {
+            //Player 1 won!
+        } else if (playerOneScore > playerTwoScore) {
+            //Player 2 won!
+        }
+
+        // View results screen
     }
 }
