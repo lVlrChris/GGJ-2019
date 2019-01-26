@@ -5,11 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+    private int _playerNr = 1;
+    [SerializeField]
     private int _pickups;
     [SerializeField]
-    private Animator _animator;
+    private ParticleSystem _sprintParticle;
     [SerializeField]
-    private int _playerNr = 1;
+    private Animator _animator;
 
     [Header("Movement Settings")]
     [SerializeField]
