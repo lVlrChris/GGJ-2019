@@ -963,11 +963,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6990995967283999145, guid: 0aadbacb438a2b447abd8a331cbc1c95,
-        type: 3}
-      propertyPath: m_Name
-      value: Pickup
-      objectReference: {fileID: 0}
     - target: {fileID: 6990995967283999138, guid: 0aadbacb438a2b447abd8a331cbc1c95,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1023,10 +1018,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6990995967283999145, guid: 0aadbacb438a2b447abd8a331cbc1c95,
+        type: 3}
+      propertyPath: m_Name
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 6990995967283999150, guid: 0aadbacb438a2b447abd8a331cbc1c95,
         type: 3}
       propertyPath: _pickupManager
       value: 
       objectReference: {fileID: 362555470}
+    - target: {fileID: 6990995967283999151, guid: 0aadbacb438a2b447abd8a331cbc1c95,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990995967283999151, guid: 0aadbacb438a2b447abd8a331cbc1c95,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990995967283999151, guid: 0aadbacb438a2b447abd8a331cbc1c95,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aadbacb438a2b447abd8a331cbc1c95, type: 3}
