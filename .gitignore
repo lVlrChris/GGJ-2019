@@ -61,7 +61,3 @@ Assets/StreamingAssets/crashlytics-build.properties
 .history
 
 # End of https://www.gitignore.io/api/unity,visualstudiocode
-ProjectSettings/UnityConnectSettings.asset
-*.asset
-ProjectSettings/UnityConnectSettings.asset
-Assets/Scenes/GameMain_BlockOut.meta
