@@ -5,7 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+    private int _playerNr = 1;
+    [SerializeField]
     private int _pickups;
+    [SerializeField]
+    private ParticleSystem _sprintParticle;
     [SerializeField]
     private Animator _animator;
 
@@ -30,6 +34,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _squashRate;
     private Vector3 _originalScale;
+    private bool isGrounded = false;
 
     private Rigidbody rb;
 
@@ -42,6 +47,8 @@ public class Player : MonoBehaviour
 
         _jumpForce = 0f;
         _originalScale = _playerModel.transform.localScale;
+        _playerModel.GetComponent<PlayerModel>().playerNr = _playerNr;
+
     }
 
     // FixedUpdate before physics calculation
@@ -52,7 +59,7 @@ public class Player : MonoBehaviour
 
     void Update() {
         float groundDistance = GetComponent<Collider>().bounds.extents.y;
-        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance + 0.1f);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance + 0.1f);
 
         if (isGrounded) {
             _animator.SetBool("isGrounded", true);
@@ -63,10 +70,10 @@ public class Player : MonoBehaviour
     }
 
     private void ballMovement() {
-        float xSpeed = Input.GetAxis("Horizontal");
-        float ySpeed = Input.GetAxis("Vertical");
+        float xSpeed = Input.GetAxis("Horizontal_P" + _playerNr);
+        float ySpeed = Input.GetAxis("Vertical_P" + _playerNr);
 
-        if (xSpeed != 0 || ySpeed != 0) {
+        if (xSpeed != 0 || ySpeed != 0 && isGrounded) {
             _animator.SetBool("isRunning", true);
         } else {
             _animator.SetBool("isRunning", false);
@@ -80,7 +87,8 @@ public class Player : MonoBehaviour
 
     private void Jump() {
         // Holding jump button
-        if (Input.GetKey(KeyCode.Space)) {
+        if (Input.GetButton("Jump_P" + _playerNr)) {
+            print("Jump_P" + _playerNr);
             _animator.SetBool("isChargingJump", true);
 
             if (_jumpForce < _maxJumpForce) {
