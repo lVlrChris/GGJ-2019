@@ -95,6 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pickups: 0
   _animator: {fileID: 1116915273534937408}
+  _playerNr: 2
   _speed: 500
   _maxSpinSpeed: 20
   _maxJumpForce: 3.8
@@ -223,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fa5fe33ea70ee48a443554822de699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNr: 1
 --- !u!1001 &2653599141877193053
 PrefabInstance:
   m_ObjectHideFlags: 0
