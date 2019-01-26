@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _squashRate;
     private Vector3 _originalScale;
+    private bool isGrounded = false;
 
     private Rigidbody rb;
 
@@ -56,7 +57,7 @@ public class Player : MonoBehaviour
 
     void Update() {
         float groundDistance = GetComponent<Collider>().bounds.extents.y;
-        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance + 0.1f);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance + 0.1f);
 
         if (isGrounded) {
             _animator.SetBool("isGrounded", true);
@@ -70,7 +71,7 @@ public class Player : MonoBehaviour
         float xSpeed = Input.GetAxis("Horizontal_P" + _playerNr);
         float ySpeed = Input.GetAxis("Vertical_P" + _playerNr);
 
-        if (xSpeed != 0 || ySpeed != 0) {
+        if (xSpeed != 0 || ySpeed != 0 && isGrounded) {
             _animator.SetBool("isRunning", true);
         } else {
             _animator.SetBool("isRunning", false);
