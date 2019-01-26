@@ -11,8 +11,11 @@ public class PlayerModel : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        transform.rotation = Quaternion.identity;
+        float xInput = Input.GetAxis("Horizontal");
+        float yInput = Input.GetAxis("Vertical");
+        transform.rotation = Quaternion.LookRotation(new Vector3(xInput, 0 , yInput));
+        // transform.rotation = Quaternion.identity;
     }
 }

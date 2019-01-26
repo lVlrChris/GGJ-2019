@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4805259331992865183}
   - component: {fileID: 4805259331992865154}
   - component: {fileID: 4805259331992865181}
-  - component: {fileID: 4805259331992865180}
+  - component: {fileID: 1484221066922276357}
   m_Layer: 0
   m_Name: Player_Model
   m_TagString: Untagged
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4805259331992865180
+--- !u!114 &1484221066922276357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 2164532210698910973, guid: 1e066eccd4f49f54a9a100e1c7fa17e2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2164532210698910973, guid: 1e066eccd4f49f54a9a100e1c7fa17e2,
         type: 3}
@@ -267,7 +267,7 @@ PrefabInstance:
     - target: {fileID: 2164532210698910973, guid: 1e066eccd4f49f54a9a100e1c7fa17e2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2164532210698910973, guid: 1e066eccd4f49f54a9a100e1c7fa17e2,
         type: 3}
@@ -282,7 +282,7 @@ PrefabInstance:
     - target: {fileID: 2164532210698910973, guid: 1e066eccd4f49f54a9a100e1c7fa17e2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2164532210698910973, guid: 1e066eccd4f49f54a9a100e1c7fa17e2,
         type: 3}
