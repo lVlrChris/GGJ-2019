@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     // GameManager is a singleton instance.
     public static GameManager instance = null;
 
     [SerializeField]
-    private float _gameDuration = 180;
+    private float _gameDuration = 90;
+
+    public float _timeLeft;
 
     void Awake() {
-        if (instance = null) {
+        if (instance == null) {
             instance = this;
             DontDestroyOnLoad(gameObject);
         } else {
@@ -23,17 +24,19 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GameTimeRoutine(_gameDuration));
+        _timeLeft = _gameDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        _timeLeft -= Time.deltaTime;
+        if (_timeLeft < 0) {
+            EndGame();
+        }
     }
 
-    private IEnumerator GameTimeRoutine(float duration) {
-        yield return new WaitForSecondsRealtime(duration);
-
+    void EndGame() {
+        
     }
 }
