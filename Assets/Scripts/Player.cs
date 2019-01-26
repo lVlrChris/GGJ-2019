@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField]
+    private int _pickups;
+    [SerializeField]
+    private Animator _animator;
+
     [Header("Movement Settings")]
     [SerializeField]
     private float _speed;
@@ -33,6 +38,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.maxAngularVelocity = _maxSpinSpeed;
+        _animator.SetBool("isChargingJump", false);
 
         _jumpForce = 0f;
         _originalScale = _playerModel.transform.localScale;
@@ -49,13 +55,22 @@ public class Player : MonoBehaviour
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance + 0.1f);
 
         if (isGrounded) {
+            _animator.SetBool("isGrounded", true);
             Jump();
+        } else {
+            _animator.SetBool("isGrounded", false);
         }
     }
 
     private void ballMovement() {
         float xSpeed = Input.GetAxis("Horizontal");
         float ySpeed = Input.GetAxis("Vertical");
+
+        if (xSpeed != 0 || ySpeed != 0) {
+            _animator.SetBool("isRunning", true);
+        } else {
+            _animator.SetBool("isRunning", false);
+        }
         
         xSpeed = xSpeed * _speed * Time.deltaTime;
         ySpeed = ySpeed * _speed * Time.deltaTime;
@@ -66,14 +81,16 @@ public class Player : MonoBehaviour
     private void Jump() {
         // Holding jump button
         if (Input.GetKey(KeyCode.Space)) {
+            _animator.SetBool("isChargingJump", true);
+
             if (_jumpForce < _maxJumpForce) {
                 _jumpForce += _jumpChargeRate * Time.deltaTime;
                 
                 float modelSquash = _playerModel.transform.localScale.y;
 
-                //Squasing
-                print("Current jump force: " + _jumpForce + " - " + _maxJumpForce);
-                print("Current Squash: " + modelSquash + " - " + _maxSquash);
+                //Squashing
+                // print("Current jump force: " + _jumpForce + " - " + _maxJumpForce);
+                // print("Current Squash: " + modelSquash + " - " + _maxSquash);
                 if (modelSquash > _maxSquash) {
                     modelSquash -= _squashRate * Time.deltaTime;
                     _playerModel.transform.localScale -= new Vector3(0, _squashRate, 0);
@@ -85,6 +102,7 @@ public class Player : MonoBehaviour
             }
 
         } else {
+            _animator.SetBool("isChargingJump", false);
             // Released jump button
             if (_jumpForce > 0f) {
                 _jumpForce = _jumpForce + _minJumpForce;
@@ -93,5 +111,9 @@ public class Player : MonoBehaviour
                 _jumpForce = 0f;
             } 
         }
+    }
+
+    public void AddPickup() {
+        _pickups++;
     }
 }
