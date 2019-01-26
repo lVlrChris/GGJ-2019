@@ -55,9 +55,10 @@ public class Player : MonoBehaviour
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance + 0.1f);
 
         if (isGrounded) {
-            print("hello");
             _animator.SetBool("isGrounded", true);
             Jump();
+        } else {
+            _animator.SetBool("isGrounded", false);
         }
     }
 
@@ -102,7 +103,6 @@ public class Player : MonoBehaviour
 
         } else {
             _animator.SetBool("isChargingJump", false);
-            _animator.SetBool("isGrounded", false);
             // Released jump button
             if (_jumpForce > 0f) {
                 _jumpForce = _jumpForce + _minJumpForce;
