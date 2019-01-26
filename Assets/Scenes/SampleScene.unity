@@ -511,6 +511,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9e9e5ece0841e4b9a8cd71fabc825a, type: 3}
+--- !u!1 &223093143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4805259332611300148, guid: 0f9e9e5ece0841e4b9a8cd71fabc825a,
+    type: 3}
+  m_PrefabInstance: {fileID: 223093142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &269776680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -998,8 +1004,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameDuration: 60
   _timeLeft: 0
-  _playerOne: {fileID: 0}
-  _playerTwo: {fileID: 0}
+  _playerOne: {fileID: 223093143}
+  _playerTwo: {fileID: 2887495759042505902}
   _pickupMultiplier: 100
 --- !u!1 &1237263121
 GameObject:
@@ -1571,6 +1577,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1bfeec832a34f24e85892df9c79e703, type: 3}
+--- !u!1 &2887495759042505902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 194940330961323203, guid: d1bfeec832a34f24e85892df9c79e703,
+    type: 3}
+  m_PrefabInstance: {fileID: 2887495759042505901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6990995965913779818
 PrefabInstance:
   m_ObjectHideFlags: 0
