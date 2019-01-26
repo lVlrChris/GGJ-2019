@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField]
+    private int _pickups;
+
     [Header("Movement Settings")]
     [SerializeField]
     private float _speed;
@@ -72,8 +75,8 @@ public class Player : MonoBehaviour
                 float modelSquash = _playerModel.transform.localScale.y;
 
                 //Squasing
-                print("Current jump force: " + _jumpForce + " - " + _maxJumpForce);
-                print("Current Squash: " + modelSquash + " - " + _maxSquash);
+                // print("Current jump force: " + _jumpForce + " - " + _maxJumpForce);
+                // print("Current Squash: " + modelSquash + " - " + _maxSquash);
                 if (modelSquash > _maxSquash) {
                     modelSquash -= _squashRate * Time.deltaTime;
                     _playerModel.transform.localScale -= new Vector3(0, _squashRate, 0);
@@ -93,5 +96,9 @@ public class Player : MonoBehaviour
                 _jumpForce = 0f;
             } 
         }
+    }
+
+    public void AddPickup() {
+        _pickups++;
     }
 }
