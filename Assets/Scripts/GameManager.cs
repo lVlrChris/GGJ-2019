@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // GameManager is a singleton instance.
-    public static GameManager instance = null;
+    public static GameManager instance;
 
     [SerializeField]
     private float _gameDuration = 90;
@@ -13,15 +13,15 @@ public class GameManager : MonoBehaviour
 
     [Header("Players")]
     [SerializeField]
-    private Player _playerOne;
+    private GameObject _playerOne;
     [SerializeField]
-    private Player _playerTwo;
+    private GameObject _playerTwo;
 
     [Header("Score Values")]
     [SerializeField]
     private int _pickupMultiplier = 100;
 
-    private bool gameStarted = false;
+    private bool _gameStarted = false;
 
 
     void Awake() {
@@ -33,33 +33,45 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         Physics.IgnoreLayerCollision(9, 10);
+        _timeLeft = _gameDuration;
+
+        //TODO: set gameStarted from menu
+        _gameStarted = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (gameStarted) {
+        if (_gameStarted) {
             _timeLeft -= Time.deltaTime;
-            if (_timeLeft < 0) {
-                EndGame();
+            if (_timeLeft <= 0) {
+                instance.CalculateScores();
             }
         }
     }
 
-    void EndGame() {
-        int playerOneScore = 0;
-        int playerTwoScore = 0;
-        playerOneScore = _playerOne.pickups * 100;
-        playerTwoScore = _playerTwo.pickups * 100;
+    public void CalculateScores() {
+        Player playerOne = _playerOne.GetComponent<Player>();
+        Player playerTwo = _playerTwo.GetComponent<Player>();
 
+        int playerOneScore = playerOne.pickups * _pickupMultiplier;
+        int playerTwoScore = playerTwo.pickups * _pickupMultiplier;
+        
+        playerOneScore -= playerOne.totalDamage;
+        playerTwoScore -= playerTwo.totalDamage;
+
+        print("Player one: " + playerOneScore + " - Player Two: " + playerTwoScore);
         if (playerOneScore > playerTwoScore) {
             //Player 1 won!
-        } else if (playerOneScore > playerTwoScore) {
+            print("Player one won!!!");
+        } else if (playerTwoScore > playerOneScore) {
             //Player 2 won!
+            print("Player two won!!!");
+        } else {
+            //Both players tied!
+            print("Both players Tied...");
         }
 
         // View results screen
