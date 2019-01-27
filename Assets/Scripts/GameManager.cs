@@ -149,6 +149,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame(bool isPlayAgain = false) {
         _mainMenu.SetActive(false);
+        PickupManager.instance.SpawnNewPickup();
 
         SoundManager.instance.PlayGameMusic(_mainTheme);
         
