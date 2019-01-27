@@ -960,7 +960,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 254.46506, y: 254.46506, z: 0}
+  Offset: {x: 255.66513, y: 255.66513, z: 0}
 --- !u!1 &1953335356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,7 +2820,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 7.5, y: 0.1, z: 5}
-  m_Center: {x: 0.012830019, y: -0.05, z: 0.002120018}
+  m_Center: {x: 0.012830019, y: 0.03, z: 0.002120018}
 --- !u!1 &4478765129496090173
 GameObject:
   m_ObjectHideFlags: 0
