@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
     [Header("Sound Effects")]
     [SerializeField]
-    private AudioClip _playerRunSource;
+    private AudioSource _playerRunSource;
     [SerializeField]
     private AudioClip _playerJumpSound;
     [SerializeField]
@@ -87,19 +87,33 @@ public class Player : MonoBehaviour
         float ySpeed = Input.GetAxis("Vertical_P" + _playerNr);
 
         if ((xSpeed != 0 || ySpeed != 0 ) && isGrounded) {
+            // Running
             _animator.SetBool("isRunning", true);
+            if (!_playerRunSource.isPlaying) {
+                _playerRunSource.Play();
+            }
+
+            if (!_sprintParticle.isPlaying) {
+                _sprintParticle.Play();
+            }
 
             xSpeed = xSpeed * _speed * Time.deltaTime;
             ySpeed = ySpeed * _speed * Time.deltaTime;
 
             rb.AddTorque(new Vector3(xSpeed, 0, ySpeed));
         } else if (!isGrounded) {
+            // Jumping
+            _playerRunSource.Pause();
+            _sprintParticle.Stop();
             xSpeed = xSpeed * _speed * Time.deltaTime;
             ySpeed = ySpeed * _speed * Time.deltaTime;
 
             _animator.SetBool("isRunning", false);
             rb.AddForce(new Vector3(-ySpeed, 0, xSpeed));
         } else {
+            // Idle
+            _playerRunSource.Pause();
+            _sprintParticle.Stop();
             _animator.SetBool("isRunning", false);
         }
         
@@ -132,6 +146,7 @@ public class Player : MonoBehaviour
             _animator.SetBool("isChargingJump", false);
             // Released jump button
             if (_jumpForce > 0f) {
+                SoundManager.instance.PlayWithRandomPitch(_playerJumpSound);
                 _jumpForce = _jumpForce + _minJumpForce;
                 rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
                 _playerModel.transform.localScale = _originalScale;
@@ -141,6 +156,8 @@ public class Player : MonoBehaviour
     }
 
     public void AddPickup() {
+        SoundManager.instance.PlaySingle(_playerPickupSound);
+        // SoundManager.instance.PlaySingle(_candyPickupSound);
         pickups++;
     }
 

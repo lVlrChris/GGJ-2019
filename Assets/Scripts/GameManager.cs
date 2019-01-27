@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
     [Header("Background Music")]
     [SerializeField]
     private AudioClip _mainTheme;
+    [SerializeField]
+    private AudioClip _menuTheme;
 
     private bool _gameStarted = false;
 
@@ -66,6 +68,8 @@ public class GameManager : MonoBehaviour
         _timeLeft = _gameDuration;
         _scoreScreen.SetActive(false);
         _mainMenu.SetActive(true);
+        SoundManager.instance.PlayGameMusic(_menuTheme);
+
     }
 
     void Update()

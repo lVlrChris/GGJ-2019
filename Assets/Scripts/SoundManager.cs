@@ -7,6 +7,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource sfxSource;
     public AudioSource musicSource;
     public static SoundManager instance = null;
+    public float lowPitchRange = .95f;
+    public float highPitchRange = 1.05f;
 
     void Awake() {
         if (instance == null) {
@@ -24,6 +26,13 @@ public class SoundManager : MonoBehaviour
     }
 
     public void PlaySingle(AudioClip clip) {
+        sfxSource.clip = clip;
+        sfxSource.Play();
+    }
+
+    public void PlayWithRandomPitch(AudioClip clip) {
+        float randomPitch = Random.Range(lowPitchRange, highPitchRange);
+        sfxSource.pitch = randomPitch;
         sfxSource.clip = clip;
         sfxSource.Play();
     }
