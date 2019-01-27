@@ -38,6 +38,17 @@ public class Player : MonoBehaviour
     private Vector3 _originalScale;
     private bool isGrounded = false;
 
+    [Header("Sound Effects")]
+    [SerializeField]
+    private AudioClip _playerRunSound;
+    [SerializeField]
+    private AudioClip _playerJumpSound;
+    [SerializeField]
+    private AudioClip _playerPickupSound;
+    [SerializeField]
+    private AudioClip _candyPickupSound;
+    
+
     private Rigidbody rb;
 
     // Start is called before the first frame update
