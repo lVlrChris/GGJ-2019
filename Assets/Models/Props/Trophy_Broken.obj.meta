@@ -1,22 +1,66 @@
 fileFormatVersion: 2
-guid: 00878da0dcd895446b22a1b0a16a77bf
+guid: c81692f0a7b872c4cb28110ae55554db
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Box015
-    100002: //RootNode
-    400000: Box015
-    400002: //RootNode
-    2100000: Box015Mat
-    2300000: Box015
-    3300000: Box015
-    4300000: Box015
+    100000: shard1
+    100002: shard2
+    100004: shard3
+    100006: shard4
+    100008: shard5
+    100010: //RootNode
+    400000: shard1
+    400002: shard2
+    400004: shard3
+    400006: shard4
+    400008: shard5
+    400010: //RootNode
+    2100000: shard1Mat
+    2100002: shard2Mat
+    2100004: shard3Mat
+    2100006: shard4Mat
+    2100008: shard5Mat
+    2300000: shard1
+    2300002: shard2
+    2300004: shard3
+    2300006: shard4
+    2300008: shard5
+    3300000: shard1
+    3300002: shard2
+    3300004: shard3
+    3300006: shard4
+    3300008: shard5
+    4300000: shard1
+    4300002: shard2
+    4300004: shard3
+    4300006: shard4
+    4300008: shard5
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Box015Mat
-    second: {fileID: 2100000, guid: 90ccd6665d7ff9c418458755b204f271, type: 2}
+      name: shard1Mat
+    second: {fileID: 2100000, guid: 7954961b9ae2d2a4f9c734808f5c5ed5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shard2Mat
+    second: {fileID: 2100000, guid: 7954961b9ae2d2a4f9c734808f5c5ed5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shard3Mat
+    second: {fileID: 2100000, guid: 7954961b9ae2d2a4f9c734808f5c5ed5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shard4Mat
+    second: {fileID: 2100000, guid: 7954961b9ae2d2a4f9c734808f5c5ed5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shard5Mat
+    second: {fileID: 2100000, guid: 7954961b9ae2d2a4f9c734808f5c5ed5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
