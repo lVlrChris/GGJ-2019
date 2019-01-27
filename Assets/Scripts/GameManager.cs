@@ -35,7 +35,19 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _scoreScreen;
     [SerializeField]
-    private Text _victoryText;
+    private GameObject _dogWinImage;
+    [SerializeField]
+    private GameObject _dogLoseImage;
+    [SerializeField]
+    private GameObject _catWinImage;
+    [SerializeField]
+    private GameObject _catLoseImage;
+    [SerializeField]
+    private GameObject _dogVictoryImage;
+    [SerializeField]
+    private GameObject _catVictoryImage;
+    [SerializeField]
+    private GameObject _drawImage;
     [SerializeField]
     private Text _dogCandyText;
     [SerializeField]
@@ -69,6 +81,14 @@ public class GameManager : MonoBehaviour
         _scoreScreen.SetActive(false);
         _mainMenu.SetActive(true);
         SoundManager.instance.PlayGameMusic(_menuTheme);
+
+        _dogWinImage.SetActive(false);
+        _dogLoseImage.SetActive(false);
+        _catWinImage.SetActive(false);
+        _catLoseImage.SetActive(false);
+        _dogVictoryImage.SetActive(false);
+        _catVictoryImage.SetActive(false);
+        _drawImage.SetActive(false);
 
     }
 
@@ -105,14 +125,21 @@ public class GameManager : MonoBehaviour
         if (playerOneScore > playerTwoScore) {
             //Player 1 won!
             print("Player one won!!!");
-            _victoryText.text = "Dog Won!";
+            _dogVictoryImage.SetActive(true);
+            _dogWinImage.SetActive(true);
+            _catLoseImage.SetActive(true);
+            
         } else if (playerTwoScore > playerOneScore) {
             //Player 2 won!
             print("Player two won!!!");
-            _victoryText.text = "Cat Won!";
+            _catVictoryImage.SetActive(true);
+            _catWinImage.SetActive(true);
+            _dogLoseImage.SetActive(true);
         } else {
             //Both players tied!
-            _victoryText.text = "Everyone is a loser...";
+            _drawImage.SetActive(true);
+            _dogLoseImage.SetActive(true);
+            _catLoseImage.SetActive(true);
             print("Both players Tied...");
         }
 
