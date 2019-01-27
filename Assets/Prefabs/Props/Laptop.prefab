@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3889201352497370725}
   - component: {fileID: 7500944802286911288}
   - component: {fileID: 2321896092869314322}
-  - component: {fileID: 4846047834099247304}
+  - component: {fileID: 8246024776494467263}
   m_Layer: 0
   m_Name: Laptop
   m_TagString: Untagged
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8903933931226170520}
-  m_LocalRotation: {x: -0, y: 0.7070984, z: -0, w: 0.70711523}
+  m_LocalRotation: {x: 0, y: 0.7071006, z: 0, w: 0.70711297}
   m_LocalPosition: {x: 0.873, y: 0.9, z: -0.284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.999, z: 0}
 --- !u!33 &3889201352497370725
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -95,8 +95,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4846047834099247304
-BoxCollider:
+--- !u!64 &8246024776494467263
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,6 +105,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4000001, y: 0.275, z: 0.25000006}
-  m_Center: {x: 0, y: 0.1375, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 1f896a92ac9af5247aac0a6ac260ce9d, type: 3}
