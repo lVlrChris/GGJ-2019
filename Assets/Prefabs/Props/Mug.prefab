@@ -124,3 +124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _brokenPrefab: {fileID: 315500203772383606, guid: bf00dd6b16bfc794e99b89fda6a874d8,
     type: 3}
+  _value: 0
+  _damageText: {fileID: 3833639424789589601, guid: 53dee79a612adc442990b544d569e532,
+    type: 3}

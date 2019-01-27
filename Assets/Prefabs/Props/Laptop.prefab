@@ -124,3 +124,5 @@ MonoBehaviour:
   _brokenPrefab: {fileID: 2307903561871228107, guid: 367afd48b40a6b34d902631f6463a2ba,
     type: 3}
   _value: 10
+  _damageText: {fileID: 3833639424789589601, guid: 53dee79a612adc442990b544d569e532,
+    type: 3}

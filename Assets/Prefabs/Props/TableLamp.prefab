@@ -125,6 +125,8 @@ MonoBehaviour:
   _brokenPrefab: {fileID: 6118973784665146604, guid: 6bd6ad2dc031c9248a5bdc3b7da41064,
     type: 3}
   _value: 50
+  _damageText: {fileID: 3833639424789589601, guid: 53dee79a612adc442990b544d569e532,
+    type: 3}
 --- !u!1 &7073172343641848941
 GameObject:
   m_ObjectHideFlags: 0

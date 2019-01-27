@@ -107,6 +107,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _brokenPrefab: {fileID: 6171778310152088193, guid: b86e19de6230f3346a0eb6feeb12452e,
     type: 3}
+  _value: 30
+  _damageText: {fileID: 3833639424789589601, guid: 53dee79a612adc442990b544d569e532,
+    type: 3}
 --- !u!54 &82304024359511862
 Rigidbody:
   m_ObjectHideFlags: 0
