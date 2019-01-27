@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -55,8 +55,8 @@ LightmapSettings:
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
-    m_Resolution: 2
-    m_BakeResolution: 40
+    m_Resolution: 4
+    m_BakeResolution: 60
     m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
@@ -73,8 +73,8 @@ LightmapSettings:
     m_MixedBakeMode: 2
     m_BakeBackend: 2
     m_PVRSampling: 1
-    m_PVRDirectSampleCount: 250
-    m_PVRSampleCount: 150
+    m_PVRDirectSampleCount: 500
+    m_PVRSampleCount: 500
     m_PVRBounces: 2
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
@@ -88,7 +88,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0bc08ce44a9e9e446b4fcf041c0af271,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -654,7 +655,13 @@ MonoBehaviour:
   _pickupMultiplier: 100
   _mainMenu: {fileID: 187135952}
   _scoreScreen: {fileID: 689813468}
-  _victoryText: {fileID: 830428983}
+  _dogWinImage: {fileID: 0}
+  _dogLoseImage: {fileID: 0}
+  _catWinImage: {fileID: 0}
+  _catLoseImage: {fileID: 0}
+  _dogVictoryImage: {fileID: 0}
+  _catVictoryImage: {fileID: 0}
+  _drawImage: {fileID: 0}
   _dogCandyText: {fileID: 2078120788}
   _dogDamageText: {fileID: 1886072725}
   _catCandyText: {fileID: 983472958}
@@ -1819,6 +1826,81 @@ PrefabInstance:
     - target: {fileID: 7809566375541417030, guid: 0ef872c8a69810049946526a1efb51b7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566375298352213, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566374048778885, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_BoxSize.x
+      value: 17.962486
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566374048778885, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_BoxOffset.x
+      value: -0.7623782
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566374839990321, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_BoxSize.x
+      value: 16.46795
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566374839990321, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_BoxOffset.x
+      value: 0.019156456
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566375604594192, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_BoxSize.x
+      value: 15.8220215
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566375604594192, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_BoxOffset.x
+      value: -0.14408112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393980, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674562607011134, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393983, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Range
+      value: 10.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393983, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393983, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.914219
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393983, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.7688679
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560960825424, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674562291244719, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: isGlobal
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3021,6 +3103,9 @@ GameObject:
   - component: {fileID: 2059153946}
   - component: {fileID: 2059153945}
   - component: {fileID: 2059153944}
+  - component: {fileID: 2059153948}
+  - component: {fileID: 2059153947}
+  - component: {fileID: 2059153949}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -3045,8 +3130,8 @@ Camera:
   m_GameObject: {fileID: 2059153943}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -3060,7 +3145,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 45
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -3074,7 +3159,7 @@ Camera:
   m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
+  m_ForceIntoRT: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -3086,12 +3171,254 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059153943}
   m_LocalRotation: {x: 0.27059805, y: -0.6532815, z: 0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 13.83, y: 15.86, z: 0}
+  m_LocalPosition: {x: 14.2, y: 16.7, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 45, y: -90, z: 0}
+--- !u!114 &2059153947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059153943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12601acaf9af72343b85bace4eb57570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RenderOrder: 0
+--- !u!114 &2059153948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059153943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf64743a1a6b454fb27131f0e59793c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RenderOrder: 0
+  callBackImageEffect: {fileID: 2059153947}
+  callBackImageEffectOpaque: {fileID: 0}
+  ShadowFix: 1
+  TemporalSampling: 1
+  DitherSpeed: 0.6256256
+  LuminanceFeedback: 0.8
+  MaxFeedback: 0.9
+  NoiseContrast: 1
+  NoiseTexture3D: {fileID: 11700000, guid: ea166c3018822e44fb93eca537a773fc, type: 2}
+  resolution: 1
+  SampleCount: 4
+  DirectionalSampleCount: 8
+  MaxDirectionalRayDistance: 128
+  MaxLightDistance: 128
+  Density: 0.05
+  AmbientLightingStrength: 0.5
+  MieScattering: 0.4
+  SunSize: 0
+  SunBleed: 1
+  Extinction: 0.05
+  ExtinctionEffect: 0
+  FogHeightEnabled: 0
+  FogHeight: 5
+  FogTransitionSize: 5
+  AboveFogPercent: 0.1
+  Ambient: 0
+  AmbientSky: {r: 1, g: 1, b: 1, a: 1}
+  AmbientEquator: {r: 1, g: 1, b: 1, a: 1}
+  AmbientGround: {r: 1, g: 1, b: 1, a: 1}
+  AmbientIntensity: 1
+  TintMode: 0
+  TintColor: {r: 1, g: 0, b: 0, a: 1}
+  TintColor2: {r: 0, g: 0, b: 1, a: 1}
+  TintIntensity: 0.2
+  TintGradient: 0.2
+  CurrentTint: {x: 0.2, y: 0, z: 0}
+  CurrentTintEdge: {x: 0, y: 0, z: 0.2}
+  NoiseEnabled: 0
+  NoiseScale: {x: 0.1, y: 0.1, z: 0.1}
+  NoiseVelocity: {x: 1, y: 0, z: 1}
+  ParticleDensitySupport: 0
+  densityResolution: 3
+  densityDistance: 64
+  TransparencySupport: 0
+  transparencyDistance: 64
+  BlurTransparency: 1
+  blurCount: 1
+  BlurDepthFalloff: 5
+  DownsampledBlurDepthFalloff: 5
+  UpSampledblurCount: 0
+  DepthThreshold: 0.06
+  GaussianWeights: 0
+  MapToLDR: 0
+  RemoveColorBanding: 1
+  MatrixVP:
+    e00: -0.00000014381436
+    e01: 0
+    e02: 1.2064024
+    e03: 0.000002042164
+    e10: 1.5163953
+    e11: -1.5163952
+    e12: -0
+    e13: 3.790988
+    e20: 0.00021216724
+    e21: 0.00021216724
+    e22: 3.576872e-11
+    e23: 0.29353404
+    e30: -0.7071068
+    e31: -0.7071068
+    e32: -0.00000011920929
+    e33: 21.849602
+  LastMatrixVP:
+    e00: -0.00000014381436
+    e01: 0
+    e02: 1.2064024
+    e03: 0.000002042164
+    e10: -1.5163953
+    e11: 1.5163952
+    e12: 0
+    e13: -3.790988
+    e20: 0.00021216724
+    e21: 0.00021216724
+    e22: 3.576872e-11
+    e23: 0.29353404
+    e30: -0.7071068
+    e31: -0.7071068
+    e32: -0.00000011920929
+    e33: 21.849602
+  LastMatrixVPInv:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  LastMatrixVP2:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  LastMatrixVPInv2:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  MatrixV:
+    e00: -0.00000011920929
+    e01: 0
+    e02: 1.0000001
+    e03: 0.0000016927719
+    e10: -0.7071068
+    e11: 0.70710677
+    e12: 0
+    e13: -1.767767
+    e20: 0.7071068
+    e21: 0.7071068
+    e22: 0.00000011920929
+    e23: -21.849602
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!114 &2059153949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059153943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 2059153946}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
+  antialiasingMode: 3
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &2068963364
 GameObject:
   m_ObjectHideFlags: 0
