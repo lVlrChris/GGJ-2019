@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -49,13 +50,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _drawImage;
     [SerializeField]
-    private Text _dogCandyText;
+    private TextMeshProUGUI _dogCandyText;
     [SerializeField]
-    private Text _dogDamageText;
+    private TextMeshProUGUI _dogDamageText;
     [SerializeField]
-    private Text _catCandyText;
+    private TextMeshProUGUI _catCandyText;
     [SerializeField]
-    private Text _catDamageText;
+    private TextMeshProUGUI _catDamageText;
 
     [Header("Background Music")]
     [SerializeField]
