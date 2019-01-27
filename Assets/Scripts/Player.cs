@@ -75,22 +75,28 @@ public class Player : MonoBehaviour
         float xSpeed = Input.GetAxis("Horizontal_P" + _playerNr);
         float ySpeed = Input.GetAxis("Vertical_P" + _playerNr);
 
-        if (xSpeed != 0 || ySpeed != 0 && isGrounded) {
+        if ((xSpeed != 0 || ySpeed != 0 ) && isGrounded) {
             _animator.SetBool("isRunning", true);
+
+            xSpeed = xSpeed * _speed * Time.deltaTime;
+            ySpeed = ySpeed * _speed * Time.deltaTime;
+
+            rb.AddTorque(new Vector3(xSpeed, 0, ySpeed));
+        } else if (!isGrounded) {
+            xSpeed = xSpeed * _speed * Time.deltaTime;
+            ySpeed = ySpeed * _speed * Time.deltaTime;
+
+            _animator.SetBool("isRunning", false);
+            rb.AddForce(new Vector3(-ySpeed, 0, xSpeed));
         } else {
             _animator.SetBool("isRunning", false);
         }
         
-        xSpeed = xSpeed * _speed * Time.deltaTime;
-        ySpeed = ySpeed * _speed * Time.deltaTime;
-
-        rb.AddTorque(new Vector3(xSpeed, 0, ySpeed));
     }
 
     private void Jump() {
         // Holding jump button
         if (Input.GetButton("Jump_P" + _playerNr)) {
-            print("Jump_P" + _playerNr);
             _animator.SetBool("isChargingJump", true);
 
             if (_jumpForce < _maxJumpForce) {
