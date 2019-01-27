@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Text _catDamageText;
 
+    [Header("Background Music")]
+    [SerializeField]
+    private AudioClip _mainTheme;
+
     private bool _gameStarted = false;
 
     void Awake() {
@@ -113,6 +117,8 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame(bool isPlayAgain = false) {
         _mainMenu.SetActive(false);
+
+        SoundManager.instance.PlayGameMusic(_mainTheme);
         
         _timeLeft = _gameDuration;
         _playerOne = Instantiate(_playerOne, _playerOneSpawn.transform.position, Quaternion.identity);

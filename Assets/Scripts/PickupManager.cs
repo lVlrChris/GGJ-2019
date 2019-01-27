@@ -21,6 +21,10 @@ public class PickupManager : MonoBehaviour
         }
     }
 
+    void Start() {
+        Instantiate(_pickupPrefab, _spawnPoints[0].transform.position, Quaternion.identity);
+    }
+
     public void SpawnNewPickup() {
         int pickedSpawnPoint = Random.Range(0, _spawnPoints.Length);
         Instantiate(_pickupPrefab, _spawnPoints[pickedSpawnPoint].transform.position, Quaternion.identity);
