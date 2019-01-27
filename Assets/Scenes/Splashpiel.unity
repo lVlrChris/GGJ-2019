@@ -455,18 +455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30291fd9e106844bb6e5b49dd798d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1028121580
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introDuration: 6
-  _nextSceneName: SampleScene
+  _nextSceneName: Level_Design_03
 --- !u!4 &1028121582
 Transform:
   m_ObjectHideFlags: 0

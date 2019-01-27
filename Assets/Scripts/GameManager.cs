@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     // GameManager is a singleton instance.
-    public static GameManager instance;
+    private static GameManager _instance;
+
+    public static GameManager Instance { get { return _instance; }}
 
     [SerializeField]
     private float _gameDuration = 90;
@@ -15,31 +19,49 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _playerOne;
     [SerializeField]
+    private GameObject _playerOneSpawn;
+    [SerializeField]
     private GameObject _playerTwo;
+    [SerializeField]
+    private GameObject _playerTwoSpawn;
 
     [Header("Score Values")]
     [SerializeField]
     private int _pickupMultiplier = 100;
 
+    [Header("Menu Objects")]
+    [SerializeField]
+    private GameObject _mainMenu;
+    [SerializeField]
+    private GameObject _scoreScreen;
+    [SerializeField]
+    private Text _victoryText;
+    [SerializeField]
+    private Text _dogCandyText;
+    [SerializeField]
+    private Text _dogDamageText;
+    [SerializeField]
+    private Text _catCandyText;
+    [SerializeField]
+    private Text _catDamageText;
+
     private bool _gameStarted = false;
 
-
     void Awake() {
-        if (instance == null) {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+        if (_instance != null && _instance != this) {
+            Destroy(this.gameObject);
         } else {
-            Destroy(gameObject);
+            _instance = this;
         }
+        // DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
         Physics.IgnoreLayerCollision(9, 10);
         _timeLeft = _gameDuration;
-
-        //TODO: set gameStarted from menu
-        _gameStarted = true;
+        _scoreScreen.SetActive(false);
+        _mainMenu.SetActive(true);
     }
 
     void Update()
@@ -47,12 +69,14 @@ public class GameManager : MonoBehaviour
         if (_gameStarted) {
             _timeLeft -= Time.deltaTime;
             if (_timeLeft <= 0) {
-                instance.CalculateScores();
+                GameManager.Instance.CalculateScores();
             }
         }
     }
 
     public void CalculateScores() {
+        _gameStarted = false;
+
         Player playerOne = _playerOne.GetComponent<Player>();
         Player playerTwo = _playerTwo.GetComponent<Player>();
 
@@ -62,18 +86,52 @@ public class GameManager : MonoBehaviour
         playerOneScore -= playerOne.totalDamage;
         playerTwoScore -= playerTwo.totalDamage;
 
-        print("Player one: " + playerOneScore + " - Player Two: " + playerTwoScore);
+        // print("Player one: " + playerOneScore + " - Player Two: " + playerTwoScore);
+
+        // Populate statistics screen
+        _dogCandyText.text = "Candy: " + playerOne.pickups;
+        _dogDamageText.text = "Damage: -" + playerOne.totalDamage;
+        _catCandyText.text = "Candy: " + playerTwo.pickups;
+        _catDamageText.text = "Damage: -" + playerTwo.totalDamage;
+
         if (playerOneScore > playerTwoScore) {
             //Player 1 won!
             print("Player one won!!!");
+            _victoryText.text = "Dog Won!";
         } else if (playerTwoScore > playerOneScore) {
             //Player 2 won!
             print("Player two won!!!");
+            _victoryText.text = "Cat Won!";
         } else {
             //Both players tied!
+            _victoryText.text = "Everyone is a loser...";
             print("Both players Tied...");
         }
 
-        // View results screen
+        _scoreScreen.SetActive(true);
+    }
+
+    public void PlayGame(bool isPlayAgain = false) {
+        _mainMenu.SetActive(false);
+        
+        _timeLeft = _gameDuration;
+        _playerOne = Instantiate(_playerOne, _playerOneSpawn.transform.position, Quaternion.identity);
+        _playerTwo = Instantiate(_playerTwo, _playerTwoSpawn.transform.position, Quaternion.identity);
+        _gameStarted = true;
+    }
+
+    public void PlayAgain() {
+        StartCoroutine(ReloadScene());
+        // SceneManager.LoadScene("Level_Design_03");
+    }
+
+    public IEnumerator ReloadScene() {
+        Scene scene = SceneManager.GetActiveScene();
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene.name);
+
+        // Wait for scene to load
+        while (!asyncLoad.isDone) {
+            yield return null;
+        }
     }
 }
