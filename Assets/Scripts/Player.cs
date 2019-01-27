@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
     [Header("Sound Effects")]
     [SerializeField]
-    private AudioClip _playerRunSound;
+    private AudioClip _playerRunSource;
     [SerializeField]
     private AudioClip _playerJumpSound;
     [SerializeField]
