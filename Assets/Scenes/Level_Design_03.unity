@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -71,10 +71,10 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 1
+    m_BakeBackend: 2
     m_PVRSampling: 1
-    m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
+    m_PVRDirectSampleCount: 250
+    m_PVRSampleCount: 150
     m_PVRBounces: 2
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
@@ -88,8 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000000, guid: 0bc08ce44a9e9e446b4fcf041c0af271,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -516,6 +515,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369117705}
   m_CullTransparentMesh: 0
+--- !u!1 &376073260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 376073262}
+  - component: {fileID: 376073261}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &376073261
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376073260}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 2.8
+  m_Range: 25
+  m_SpotAngle: 79.41535
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 0.15
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &376073262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376073260}
+  m_LocalRotation: {x: 0.57461315, y: -0.41209185, z: -0.4120919, w: 0.5746132}
+  m_LocalPosition: {x: 15.64, y: 10.05, z: 2.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 18.707, y: -90.00001, z: -90.00001}
 --- !u!1 &509711788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,7 +1173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &742663584
 Light:
   m_ObjectHideFlags: 0
@@ -1643,7 +1711,127 @@ PrefabInstance:
     - target: {fileID: 5928674560941895405, guid: 0ef872c8a69810049946526a1efb51b7,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3787535056755654607, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566375298352213, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566375530268770, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560941895408, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560941895408, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674562607011128, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.555
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566375298352219, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 957460079049317664, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674562607011134, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393983, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Range
+      value: 11.543039
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393983, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393983, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393983, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8575312
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393983, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6179246
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393977, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: CustomIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393977, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: Offset.x
+      value: 505.14816
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393977, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: Offset.y
+      value: 505.14816
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560904393977, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: Intensity
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560941895409, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: field of view
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560941895409, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560960825424, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_AreaSize.x
+      value: 6.7597804
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928674560960825424, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_AreaSize.y
+      value: 4.066884
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566374314005250, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809566374314005248, guid: 0ef872c8a69810049946526a1efb51b7,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef872c8a69810049946526a1efb51b7, type: 3}
